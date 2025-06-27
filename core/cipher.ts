@@ -9,6 +9,7 @@ abstract class Cipher {
     }
   }
 
+  // Template Method Pattern
   abstract encode(text: string): string;
   abstract decode(text: string): string;
 

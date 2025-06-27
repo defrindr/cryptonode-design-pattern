@@ -11,6 +11,7 @@ type CipherOptionsMap = {
 type CipherType = keyof CipherOptionsMap;
 type CipherConstructor<T> = new (options: T) => Cipher;
 
+// Factory Pattern
 class CipherFactory {
   private static cipherMap: {
     [K in CipherType]: CipherConstructor<CipherOptionsMap[K]>;
